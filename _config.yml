@@ -1,24 +1,14 @@
 # Site
-<<<<<<< HEAD
 title:              Misadventures of a Baby Dev
 bio:                'I know how to code, sorta?'
 description:        "A retelling of technical shenanigans and what was learned from them. In all seriousness, this is a blog to document what I've learned as a beginner developer and potentially help others."
-=======
-title:              Moon
-bio:                'Minimal, one column jekyll theme.'
-description:        "Moon is a minimal, one column jekyll theme for your blog."
->>>>>>> origin/master
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
 background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
-<<<<<<< HEAD
 url:                https://DebugSteven.github.io/
-=======
-url:                https://taylantatli.github.io/Moon
->>>>>>> origin/master
 
 # Jekyll
 permalink:          /:title/
@@ -36,11 +26,7 @@ sass:
   style:            compressed
 
 # Comments
-<<<<<<< HEAD
 #disqus_shortname:   username
-=======
-disqus_shortname:   taylantatli
->>>>>>> origin/master
 
 # Social
 # if you don't have any of social below, comment the line.
@@ -51,7 +37,6 @@ disqus_shortname:   taylantatli
   #ad-client:
   #ad-slot:
 #bing-verify:
-<<<<<<< HEAD
 email:              DebugSteven@gmail.com
 twitter:            DebugSteven
 #facebook:           username
@@ -60,26 +45,12 @@ github-url:         username
 linkedin:           j-haigh-a80988106
 #xing:              username
 #instagram:          username
-=======
-#email:
-twitter:            username
-facebook:           username
-github-url:         username
-#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-#linkedin:          username
-#xing:              username
-instagram:          username
->>>>>>> origin/master
 #lastfm:            username
 #tumblr:            username
 #medium:            '@username'
 #pinterest:         username
 #foursquare:        username
-<<<<<<< HEAD
 #steam:              username
-=======
-steam:              username
->>>>>>> origin/master
 #dribbble:          username
 #youtube:           username
 #youtube-channel:   channel
@@ -99,11 +70,7 @@ gems:
   - jekyll-gist
 
 jekyll-mentions:
-<<<<<<< HEAD
     base_url: https://twitter.com
-=======
-    base_url: https://github.com
->>>>>>> origin/master
 
 # Exclude list
 exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
