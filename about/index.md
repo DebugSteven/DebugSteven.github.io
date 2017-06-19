@@ -15,6 +15,7 @@ I spent one year at Vantiv working as a Software Engineer Intern. I finished a f
 
 ## Frequently Asked Questions
 _Is it just "J"?_ 
+
 _Why is your username DebugSteven?_
 
 Strange names, I know! I go by J because it is gender neutral. It is the first letter of my birth name and I wanted to keep it close to that. 
