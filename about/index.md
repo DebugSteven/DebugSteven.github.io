@@ -20,7 +20,7 @@ _Why is your username DebugSteven?_
 
 Strange names, I know! I go by J because it is gender neutral. It is the first letter of my birth name and I wanted to keep it close to that. 
 
-If I had been assigned male at birth I would've named me Steven. I really liked the name and wanted to incorporate it into my life. I joke that all I do is fix bugs or you know, debug, and Debug Steven rolled off the tongue.
+If I had been assigned male at birth I would've been named Steven. I really liked the name and wanted to incorporate it into my life. I joke that all I do is fix bugs or you know, debug, and Debug Steven rolled off the tongue.
 
 ## What's Next?
 * Blog posts
