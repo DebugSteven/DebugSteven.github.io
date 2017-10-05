@@ -9,7 +9,7 @@ tag:
 - haskell
 ---
 
-My background is C++. Haskell is quite a bit different when it comes to
+Haskell is quite a bit different when it comes to
 control structures for directing your program flow. In this post, I want to focus on the difference between if-then-else, case expressions, and guards.
 
 
@@ -33,41 +33,47 @@ test g = f g
 Now that you've got it straight between expressions and statements
 let's dig into if-then-else blocks.
 
+## if-then-else expressions
 
 An if-then-else block structure is this:
+
+```
 if (A conditional expression evaluated to True or False)
+
 then (An expression returned when the condition is True)
+
 else (An expression returned when the condition is False)
+```
 
-
-1) The expression you put in your if expression must result in
-either True or False.
-2) You gotta have an else to handle a False if value.
-You must have the else expression. Otherwise you will get a parse error.
+1. The expression you put in your `if` expression must result in
+either `True` or `False`.
+2. You gotta have an `else` to handle a `False` if value.
+You must have the `else` expression. Otherwise you will get a parse error.
 Thems the rules.
 
 
 ```haskell
-wrong = if True then "this won't work" -- doesn't compile
-
+-- doesn't compile
+wrong = if True then "this won't work"
 ```
 
 
-In the example below we can see that the variable woah will always be
-equal to "something cool" since the conditional expression True is fully
-evaluated and remains True.
+In the example below we can see that the variable `woah` will always be
+equal to `"something cool"` since the conditional expression `True` is fully
+evaluated and remains `True`.
 ```haskell
 woah = if True then "something cool" else "something's not working"
 ```
 
 
 Here's an example of a function that takes a variable and the condition
-changes. If the food variable isn't "pizza" the else expression is
+changes. If the `food` variable isn't `"pizza"` the `else` expression is
 evaluated. Try it out for yourself!
 ```haskell
 party food = if food == "pizza" then "hooray pizza party!" else "it's not pizza :("
 ```
 
+## Case expressions
 
 Case expressions are sorta similar to if-then-else expressions. In fact, we
 can rewrite our last example using a case expression instead. 
@@ -77,9 +83,9 @@ party' food =
     True  -> "hooray pizza party!"
     False -> "it's not pizza :("
 ```
-The condition you want to evaluate goes inbetween the "case" and "of"
+The condition you want to evaluate goes inbetween the `case` and `of`
 and then you can match on the various values that can be returned, in
-this instance (==) evaluates to True or False. 
+this instance `(==)` evaluates to `True` or `False`. 
 
 
 There are couple of differences you probably see here.
@@ -93,7 +99,7 @@ a silly example of "comparing" the variable food to the string "pizza"
 compare :: a -> a -> Ordering
 ```
 
-The possible values of Ordering are LT | EQ | GT 
+The possible values of Ordering are `LT | EQ | GT`
 
 
 ```haskell
@@ -106,8 +112,8 @@ pizza' food =
 
 
 4) We don't have to match on the cases with the values specifically.
-An underscore _ can be used to catch any of the cases we don't handle
-specifically. Underscore is kinda like a variable (identifier) in Haskell, 
+An underscore `_` can be used to catch any of the cases we don't handle
+specifically. `_` is kinda like a variable (identifier) in Haskell, 
 but you can't assign it to anything... It says "we don't care about this
 value." This will make sure our case expression is a complete function,
 handling all the different possibilities.
@@ -124,6 +130,7 @@ pizza'' food =
 There is a lot more to say for case expressions, but that's the gist of
 it. Onto guards!
 
+## Guards
 
 Guards have some aspects of case expressions and some aspects of
 if-then-else. 
@@ -133,12 +140,12 @@ They are similar to if-then-else expressions because those expressions must
 evaluate to a boolean value.
 
 
-1) Each expression is preceded by a | and followed by an =
-2) The value on the right side of the = is evaluated only if the
-expression on the left side is evaluates to True.
-3) Instead of using underscore for our catch all (because all our
-expressions must evaluate to boolean values), we use otherwise.
-otherwise is defined as the value True.
+1. Each expression is preceded by a `|` and followed by an `=`
+2. The value on the right side of the `=` is evaluated only if the
+expression on the left side evaluates to `True`.
+3. Instead of using `_` for our catch all (because all our
+expressions must evaluate to boolean values), we use `otherwise`.
+`otherwise` is defined as the value `True`.
 
 
 You'd want to use a guard when there are more than 2 or more specific
@@ -154,8 +161,8 @@ party'' food
   | otherwise          = "that's not party food"
 ```
 
-otherwise is used by convention to make guards more readable. Just to
-prove that otherwise is just True we can rewrite our function with the
+`otherwise` is used by convention to make guards more readable. Just to
+prove that `otherwise` is just `True` we can rewrite our function with the
 value instead of the variable.
 
 ```haskell
