@@ -39,9 +39,7 @@ An if-then-else block structure is this:
 
 ```
 if (A conditional expression evaluated to True or False)
-
 then (An expression returned when the condition is True)
-
 else (An expression returned when the condition is False)
 ```
 
@@ -89,10 +87,10 @@ this instance `(==)` evaluates to `True` or `False`.
 
 
 There are couple of differences you probably see here.
-1) We match on the possible values our expression can reduce to.
-2) We got these cool arrow guys that point to the expression we want to
+1. We match on the possible values our expression can reduce to.
+2. We got these cool arrow guys that point to the expression we want to
 return based on the matched value or otherwise case.
-3) It doesn't have to be a boolean expression. This opens up a lot of
+3. It doesn't have to be a boolean expression. This opens up a lot of
 choices for the expression you want to use for a case. Below I did
 a silly example of "comparing" the variable food to the string "pizza"
 ```haskell
@@ -111,7 +109,7 @@ pizza' food =
 ```
 
 
-4) We don't have to match on the cases with the values specifically.
+4. We don't have to match on the cases with the values specifically.
 An underscore `_` can be used to catch any of the cases we don't handle
 specifically. `_` is kinda like a variable (identifier) in Haskell, 
 but you can't assign it to anything... It says "we don't care about this
