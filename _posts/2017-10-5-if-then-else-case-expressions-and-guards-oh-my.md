@@ -93,20 +93,17 @@ return based on the matched value or otherwise case.
 3. It doesn't have to be a boolean expression. This opens up a lot of
 choices for the expression you want to use for a case. Below I did
 a silly example of "comparing" the variable food to the string "pizza"
-```haskell
-compare :: a -> a -> Ordering
-```
-
-The possible values of Ordering are `LT | EQ | GT`
-
-
-```haskell
-pizza' food =
-  case compare food "pizza" of
-    LT -> "This food is weaker than pizza"
-    EQ -> "Pizza is the correct party food"
-    GT -> "This food is greater than pizza!!!!"
-```
+    ```haskell
+    compare :: a -> a -> Ordering
+    ```
+    The possible values of Ordering are `LT | EQ | GT`
+    ```haskell
+    pizza' food =
+      case compare food "pizza" of
+        LT -> "This food is weaker than pizza"
+        EQ -> "Pizza is the correct party food"
+        GT -> "This food is greater than pizza!!!!"
+    ```
 
 
 4. We don't have to match on the cases with the values specifically.
