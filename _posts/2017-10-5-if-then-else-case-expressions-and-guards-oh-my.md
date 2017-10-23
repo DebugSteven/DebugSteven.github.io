@@ -45,7 +45,7 @@ else (An expression returned when the condition is False)
 
 1. The expression you put in your `if` expression must result in
 either `True` or `False`.
-2. You gotta have an `else` to handle a `False` if value.
+2. You gotta have an `else` to handle a `False` `if` value.
 You must have the `else` expression. Otherwise you will get a parse error.
 Thems the rules.
 
@@ -92,7 +92,7 @@ There are couple of differences you probably see here.
 return based on the matched value or otherwise case.
 3. It doesn't have to be a boolean expression. This opens up a lot of
 choices for the expression you want to use for a case. Below I did
-a silly example of "comparing" the variable food to the string "pizza"
+a silly example of "comparing" the variable `food` to the string `"pizza"`
     ```haskell
     compare :: a -> a -> Ordering
     ```
