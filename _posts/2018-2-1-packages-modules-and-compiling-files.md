@@ -56,7 +56,7 @@ tests:
 
 The next part is adding these libraries to our source files so we can
 use them! Since `QuickCheck` and `hspec` are dependencies only for the
-`Spec.hs` file we'll want to add our module imports there.
+`Spec.hs` file we'll want to add our **module** imports there.
 
 Module names do not have to be the same as package names.
 We can go the hackage page for [QuickCheck](https://hackage.haskell.org/package/QuickCheck) 
