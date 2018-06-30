@@ -1,17 +1,18 @@
 ---
 layout: page
-title: Misadventures of a New Dev
-tags: [about, tech, beginner, developer, shenanigans]
+title: DebugSteven
+tags: [about, tech, developer, haskell, rust]
 date: 2017-06-19
 comments: false
 ---
     
-<center><a href="http://DebugSteven.github.io/"><b>Misadventures of a New Dev</b></a> is a blog to document what I've learned as a beginner developer and potentially help others.</center>
-
 ## About Me
-I'm J! I'm a quirky nonbinary coder kid with they/them/their pronouns. I finished my Bachelor's in Computer Science from the University of Colorado at Denver in May 2017 and I'm trying to find my niche in the coding world. I have a budding interest in functional programming. 
 
-I spent one year at Vantiv working as a Software Engineer Intern. I finished a freelance progressive programming contract gig (that I'm going to write about soon) and I'm looking for a full time job now.
+My name is J! I'm a nonbinary coder who uses they/them/their pronouns. I started my first full time tech job as a Rust developer in May 2018. I finished my Bachelor's in Computer Science from the University of Colorado at Denver in May 2017. 
+
+For the last year, I'd been self studying Haskell by working through the [Haskell Book](haskellbook.com) and completed the entire book at the end of May 2018. I started Denver's first Haskell Book Club and worked through the book with many other developers interested in learning Haskell. 
+
+I'm always interested in learning more about programming and talking with others about programming. You'll frequently find me at [DenverFP meetup](https://www.meetup.com/DenverFP/) or the [Rust Boulder/Denver meetup](https://www.meetup.com/Rust-Boulder-Denver/). If you want to get in touch send me an email at DebugSteven@gmail.com or find me on Twitter [@DebugSteven](https://twitter.com/DebugSteven)
 
 ## Frequently Asked Questions
 _Is it just "J"?_ 
@@ -22,14 +23,6 @@ Strange names, I know! I go by J because it is gender neutral. It is the first l
 
 If I had been assigned male at birth I would've been named Steven. I really liked the name and wanted to incorporate it into my life. I joke that all I do is fix bugs or you know, debug, and Debug Steven rolled off the tongue.
 
-## What's Next?
-* Blog posts
-* Haskell
-* At least one gross post about WordPress (it will be great)
-
 ## Work
 
-You're a tech recuiter and you think I'd be a good fit?
-I'm flattered!
-
-See my [awesome resume](https://github.com/DebugSteven/Resume/blob/master/DebugSteven_Resume.pdf)
+I'm not currently looking for new opportunities right now (updated 6/30/18), but if you're interested to see what I've done so far you can [view my resume here](https://github.com/DebugSteven/Resume/blob/master/DebugSteven_Resume.pdf).

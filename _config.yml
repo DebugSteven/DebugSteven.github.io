@@ -1,14 +1,14 @@
 # Site
-title:              Misadventures of a New Dev
-bio:                "I'm making cool stuff and documenting it"
-description:        "A retelling of technical shenanigans and what was learned from them. In all seriousness, this is a blog to document what I've learned as a beginner developer and potentially help others."
+title:              J Haigh
+bio:                "Rust Developer | DenverFP co-organizer | Rust Boulder/Denver co-organizer | Runner of a Haskell Book Club | Occasional author of blog posts | Speaker | Hopeful about the future of programming"
+description:        "I'm very passionate about Haskell and Rust and would like to share the joy I've found in learning those languages with others. Strong and static types help make me more confident that my code will work in the future."
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
 background:         'assets/img/background.png'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
-url:                https://DebugSteven.github.io/
+url:                https://DebugSteven.github.io
 
 # Jekyll
 permalink:          /:title/
