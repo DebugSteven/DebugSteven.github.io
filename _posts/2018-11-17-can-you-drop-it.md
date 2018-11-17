@@ -21,13 +21,13 @@ Last week I was working on an issue for [Dalek](https://dalek.rs/) that requeste
 
 I hadn’t thought a lot about `drop`. For the last year, when I was writing Haskell or writing web applications I didn't think about resource management. Also, because of the ownership semantics in Rust, when the program is done executing it automatically cleans up its resources & `drop` is automatically called when a value is no longer in use.
 
-### What are we dropping?
+## What are we dropping?
 
 Honestly, off the top of my head, I wasn't sure to implement `drop`. I thought about what the purpose of `drop` really is. It's to deallocate resources that we know we aren't using anymore. The `drop` function just needs to indicate to the compiler that we don't need the resources it has kindly allocated for us anymore so the operating system can allocate those resources for other processes.
 
 I want to say more on what I mean by "resources." At first, I thought that the only sort of resource we would deallocate in a program was a piece of memory. Most often memory is the resource you will deallocate when `drop` is called because it's where our values from our functions live when we are executing our code. There are plenty of other kinds of resources that our programs use though! We have file handlers; we have network connections, process connections, all kinds of state that our program knows about that isn't a memory address.
 
-### How do we drop?
+## How do we drop?
 
 Then I looked at the type signature & thought about what it meant.
 ```rust
@@ -47,7 +47,7 @@ There are rules for the order in which resources are dropped.
 
 The drop checker determines the order that values will be dropped. The compiler & type system alone do not have enough information about the contents of a type to know if we might accidentally create a dangling pointer if we drop resources potentially too early when our rules for ownership might allow references to those references later on in the code.
 
-### Which kinds of values can we not drop?
+## Which kinds of values can we not drop?
 
 #### Any value that we can't take ownership of cannot be dropped.
 
@@ -98,7 +98,7 @@ If we have types with generic lifetimes, it's possible that we could have an imp
 
 There's a great explanation along with examples of the [extra considerations when implementing drop with generic lifetimes](https://doc.rust-lang.org/nomicon/dropck.html) that I found really interesting to read about.
 
-### Can we drop it?
+## Can we drop it?
 
 Sometimes we want to do something with our value before we tell the compiler that we're done using a resource. In this particular case, I wanted to clear the values before deallocating the memory. Memory isn't zeroed when it is deallocated. We wouldn't want to leave sensitive information in memory in the event that another process were able to get to it.
 
