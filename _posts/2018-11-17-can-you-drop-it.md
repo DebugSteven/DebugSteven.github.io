@@ -41,7 +41,7 @@ So I looked up the implementation for `drop` & found... *drumroll*
 ```
 These good empty curly braces. A Rust expression that evaluates to `()`. To me at least, this made sense. We are taking ownership of the value `x`, moving it into nothing, & giving the program back a `()` at the type level to express that operation.
 
-There are rules for the order in which resources are dropped.
+There are [rules for the order in which resources are dropped](https://doc.rust-lang.org/std/ops/trait.Drop.html).
 * Variables are dropped in the reverse order that they are declared.
 * We drop fields recursively, the outer most type is dropped first to the inner most type being dropped last.
 
