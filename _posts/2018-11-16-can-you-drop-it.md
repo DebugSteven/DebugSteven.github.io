@@ -7,6 +7,7 @@ comments: false
 tag:
 - rust
 - open source
+- security
 - compiler
 - programming languages
 ---
@@ -137,5 +138,6 @@ impl Drop for SharedSecret {
 ```
 
 The major difference in this `drop` implementation is that we are using [`transmute`](https://doc.rust-lang.org/std/mem/fn.transmute.html). From the documentation,
-> `transmute` is semantically equivalent to a bitwise move of one type into another. It copies the bits from the source value into the destination value, then forgets the original.
-So the result is essentially the same. We get a `MontgomeryPoint` value that is overwritten as 32 zero bytes & at the end of the function scope, the value for `MontgomeryPoint` is dropped.
+> `transmute` is semantically equivalent to a bitwise move of one type into another. It copies the bits from the source value into the destination value, then forgets the original. So the result is essentially the same. We get a `MontgomeryPoint` value that is overwritten as 32 zero bytes & at the end of the function scope, the value for `MontgomeryPoint` is dropped.
+
+I imagine that this is just scratching the surface when it comes to `drop` & useful logic that can modify your resources before they are dropped. These few examples for security were really cool & I'm excited to see more examples.
