@@ -13,17 +13,19 @@ tag:
 ---
 
 > I have no idea how to implement `std::mem::drop`
+
+<!-- -->
 > You don't; `mem::drop` is nothing.
 
 Last week I was working on an issue for [Dalek](https://dalek.rs/) that requested some new types to write around `[u8; 32]` types used in the code for different kinds of secret keys & to clear the value of the secret key when the value is dropped.
 
-I hadn’t thought a lot about `drop`. For the last year, when I was writing Haskell or writing web applications I didn't think about resources management. Also, because of the ownership semantics in Rust, when the program is done executing it automatically cleans up its resources & `drop` is called when a value is no longer in use.
+I hadn’t thought a lot about `drop`. For the last year, when I was writing Haskell or writing web applications I didn't think about resource management. Also, because of the ownership semantics in Rust, when the program is done executing it automatically cleans up its resources & `drop` is automatically called when a value is no longer in use.
 
 ### What are we dropping?
 
-Honestly, off the top of my head, I wasn't sure to implement `drop`. I thought about what the purpose of `drop` really is. It's to deallocate resources that we know we aren't using anymore. The `drop` function just needs to indicate to the operating system that we don't need the resources it has kindly allocated for us anymore so it can be used for other processes.
+Honestly, off the top of my head, I wasn't sure to implement `drop`. I thought about what the purpose of `drop` really is. It's to deallocate resources that we know we aren't using anymore. The `drop` function just needs to indicate to the compiler that we don't need the resources it has kindly allocated for us anymore so the operating system can allocate those resources for other processes.
 
-I want to say more on what I mean by "resources". At first, I thought that the only sort of resource we would deallocate in a program was a piece of memory. Most often memory is the resource you will deallocate when `drop` is called because it's where our values from our functions live when we are executing our code. There are plenty of other kinds of resources that our programs use though! We have file handlers; we have network connections, process connections, all kinds of state that our program knows about that isn't a memory address.
+I want to say more on what I mean by "resources." At first, I thought that the only sort of resource we would deallocate in a program was a piece of memory. Most often memory is the resource you will deallocate when `drop` is called because it's where our values from our functions live when we are executing our code. There are plenty of other kinds of resources that our programs use though! We have file handlers; we have network connections, process connections, all kinds of state that our program knows about that isn't a memory address.
 
 ### How do we drop?
 
@@ -31,19 +33,23 @@ Then I looked at the type signature & thought about what it meant.
 ```rust
 pub fn drop<T>(_x: T)
 ```
-This type signature says, we have a variable `x` that we never use (which we indicate by prefixing the variable with an underscore) with a generic type `T`, where `T` has an implementation of the `Drop` trait. The return type for this function is an implicit `()`. My guess was the simplest implementation of a function that evaluates to `()` & doesn't use its only argument would be empty curly braces.
+This type signature says, we have a variable `x` that we never use (which we indicate by prefixing the variable with an underscore) that has a generic type `T`, where `T` has an implementation of the `Drop` trait. The return type for this function is an implicit `()`. My guess was the simplest implementation of a function that evaluates to `()` & doesn't use its only argument would be empty curly braces.
 
 So I looked up the implementation for `drop` & found... *drumroll*
 ```rust
 { }
 ```
-These good empty curly braces. A Rust expression that evaluates to `()`. To me at least, this made sense. We are taking ownership of the value `x`, moving it into nothing, & giving the program back a `()` to express that operation as a type.
+These good empty curly braces. A Rust expression that evaluates to `()`. To me at least, this made sense. We are taking ownership of the value `x`, moving it into nothing, & giving the program back a `()` at the type level to express that operation.
 
-Variables are dropped in the reverse order that they are declared. We drop fields recursively, the outer most type is dropped first to the inner most type being dropped last. The drop checker determines the order that values will be dropped. The compiler & type system alone do not have enough information about the contents of a type to know if we might accidentally create a dangling pointer if we drop resources potentially too early.
+There are rules for the order in which resources are dropped.
+* Variables are dropped in the reverse order that they are declared.
+* We drop fields recursively, the outer most type is dropped first to the inner most type being dropped last.
+
+The drop checker determines the order that values will be dropped. The compiler & type system alone do not have enough information about the contents of a type to know if we might accidentally create a dangling pointer if we drop resources potentially too early when our rules for ownership might allow references to those references later on in the code.
 
 ### Which kinds of values can we not drop?
 
-##### Any value that we can't take ownership of cannot be dropped.
+#### Any value that we can't take ownership of cannot be dropped.
 
 Anything with a `Copy` trait cannot be dropped. With `Copy`, a bitwise copy of your value is made implicitly when it is assigned to another variable or passed to a function & your original value is still valid. You can still call `drop` on values that have the `Copy` trait. What you'll be doing is moving a copy of that value when you pass it to `drop` & then dropping the copy. The value will still exist after. This is because copy semantics work differently than the default move semantics with regards to ownership.
 
@@ -82,9 +88,9 @@ error[E0184]: the trait `Copy` may not be implemented for this type; the type ha
   |                  ^^^^ Copy not allowed on types with destructors
 ```
 
-If you delete the `Copy` in this `derive` attribute then the code will compile.
+If you delete the `Copy` in the `derive` attribute in the code sample then the code will compile.
 
-##### Values with generic lifetimes that could be destroyed before they would be referenced
+#### Values with generic lifetimes that could be destroyed before they would be referenced
 
 This goes back to the rules about the order that resources are dropped. Values are dropped in the opposite order that they are declared & they are dropped from outer most type to insider most type.
 
@@ -94,7 +100,7 @@ There's a great explanation along with examples of the [extra considerations whe
 
 ### Can we drop it?
 
-Sometimes we want to do something with our value before we tell the operating system that we done using a resource. In this particular case, I wanted to clear the values before deallocating the memory. Memory isn't zeroed when it is deallocated. We wouldn't want to leave sensitive information in memory in the event that another process were able to get to it.
+Sometimes we want to do something with our value before we tell the compiler that we're done using a resource. In this particular case, I wanted to clear the values before deallocating the memory. Memory isn't zeroed when it is deallocated. We wouldn't want to leave sensitive information in memory in the event that another process were able to get to it.
 
 ```rust
 use clear_on_drop::clear::Clear;
