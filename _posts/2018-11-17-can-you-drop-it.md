@@ -17,7 +17,7 @@ tag:
 <!-- -->
 > You don't; `mem::drop` is nothing.
 
-Last week I was working on an issue for [Dalek](https://dalek.rs/) that requested some new types to write around `[u8; 32]` types used in the code for different kinds of secret keys & to clear the value of the secret key when the value is dropped.
+Last week I was working on an issue for [Dalek](https://dalek.rs/) that requested some new types to wrap around `[u8; 32]` types used in the code for different kinds of secret keys & to clear the value of the secret key when the value is dropped.
 
 I hadn’t thought a lot about `drop`. For the last year, when I was writing Haskell or writing web applications I didn't think about resource management. Also, because of the ownership semantics in Rust, when the program is done executing it automatically cleans up its resources & `drop` is automatically called when a value is no longer in use.
 
