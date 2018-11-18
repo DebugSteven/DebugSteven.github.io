@@ -11,7 +11,9 @@ tag:
 - open source
 ---
 
-By choice, the 12 hour days at RC haven’t really stopped. I did attend some Meetups so there were some days where I spent less time in the physical space, but for the most part it was still spent on tech related events. I did some processing on why I want to spend so much time here. The time I spend here is not only writing code. I stop & talk with people & learn about all sorts of other things. It just feels emotionally really good being here. The momentum I’ve had learning things here has been amazing though & I want to keep it up! I did a better job this week at walking around & making sure I slept enough & ate enough. For the most part, I think all of those particular issues on self care were an issue of adjusting to NYC. & I am adjusting slowly, but surely.
+By choice, the 12 hour days at RC haven’t really stopped. I did attend some Meetups so there were some days where I spent less time in the physical space, but for the most part it was still spent on tech related events. I did some processing on why I want to spend so much time here. The time I spend here is not only writing code. I stop & talk with people & learn about all sorts of other things. It just feels emotionally really good being here.
+
+The momentum I’ve had learning things here has been amazing though & I want to keep it up! I did a better job this week at walking around & making sure I slept enough & ate enough. For the most part, I think all of those particular issues on self care were an issue of adjusting to NYC. & I am adjusting slowly, but surely.
 
 ## Getting Back to Haskell
 
