@@ -1,7 +1,7 @@
 # Site
 title:              J Haigh
 bio:                "Rust Developer | DenverFP co-organizer | Rust Boulder/Denver co-organizer | Runner of a Haskell Book Club | Occasional author of blog posts | Speaker | Hopeful about the future of programming"
-description:        "I'm very passionate about Haskell and Rust and would like to share the joy I've found in learning those languages with others. Strong and static types help make me more confident that my code will work in the future."
+description:        "J Haigh is software developer passionate about Haskell & Rust. They want to share the joy they've found in learning those languages with others. Strong and static types help make them more confident that their code will work in the future."
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
@@ -21,6 +21,8 @@ kramdown:
   toc_levels:       1..6
   enable_coderay:   false
 mathjax:            true
+plugins:
+    - jekyll-feed
 sass:
   sass_dir:         _sass
   style:            compressed
