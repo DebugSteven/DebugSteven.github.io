@@ -15,9 +15,6 @@ tag:
 
 > I planned Thanksgiving & I’m planning a conference!
 
-<!-- -->
-> I wrestled with git & a turkey!
-
 ## Turkey Wrestling
 
 The week started with my usual break on Sunday. I went out for breakfast & relaxed as usual. Vaibhav took us to a Damascus bakery & invited the group back to his place for baklava. That was my 1st time having it & it was great! 
