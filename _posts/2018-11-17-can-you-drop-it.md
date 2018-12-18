@@ -58,7 +58,7 @@ fn main() {
     let x: u8 = 1; // primative types have an implementation for Copy
     drop(x); // a copy of `x` is moved and dropped
 
-    println!("x: {}); // outputs: x: 1
+    println!("x: {}"); // outputs: x: 1
 }
 ```
 
