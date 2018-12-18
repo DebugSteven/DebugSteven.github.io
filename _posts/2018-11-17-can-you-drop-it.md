@@ -49,7 +49,7 @@ The drop checker determines the order that values will be dropped. The compiler 
 
 ## Which kinds of values can we not drop?
 
-#### Any value that we can't take ownership of cannot be dropped.
+#### Any value we can't take ownership of cannot be dropped.
 
 Anything with a `Copy` trait cannot be dropped. With `Copy`, a bitwise copy of your value is made implicitly when it is assigned to another variable or passed to a function & your original value is still valid. You can still call `drop` on values that have the `Copy` trait. What you'll be doing is moving a copy of that value when you pass it to `drop` & then dropping the copy. The value will still exist after. This is because copy semantics work differently than the default move semantics with regards to ownership.
 
@@ -62,7 +62,7 @@ fn main() {
 }
 ```
 
-Anything with a `Copy` trait cannot have an implementation for the `Drop` trait
+Anything with a `Copy` trait cannot have an implementation for the `Drop` trait.
 If you try to write an implementation for `Drop` for a type that has an instance of `Copy` you'll end up with something like this:
 
 ```rust
@@ -94,7 +94,7 @@ If you delete the `Copy` in the `derive` attribute in the code sample then the c
 
 This goes back to the rules about the order that resources are dropped. Values are dropped in the opposite order that they are declared & they are dropped from outer most type to insider most type.
 
-If we have types with generic lifetimes, it's possible that we could have an implementation for `drop` that tries to use a value that has already been dropped. Since we don't know what the logic inside an implementation of `drop` might do or reference there has to be extra care that we don't access memory that has already been deallocated.
+If we have types with generic lifetimes, it's possible that we could have an implementation for `drop` that tries to use a value that has already been dropped. Since we don't know what the logic inside an implementation of `drop` might do or reference, there has to be extra care that we don't access memory that has already been deallocated.
 
 There's a great explanation along with examples of the [extra considerations when implementing drop with generic lifetimes](https://doc.rust-lang.org/nomicon/dropck.html) that I found really interesting to read about.
 
@@ -144,6 +144,8 @@ impl Drop for SharedSecret {
 ```
 
 The major difference in this `drop` implementation is that we are using [`transmute`](https://doc.rust-lang.org/std/mem/fn.transmute.html). From the documentation,
-> `transmute` is semantically equivalent to a bitwise move of one type into another. It copies the bits from the source value into the destination value, then forgets the original. So the result is essentially the same. We get a `MontgomeryPoint` value that is overwritten as 32 zero bytes & at the end of the function scope, the value for `MontgomeryPoint` is dropped.
+> `transmute` is semantically equivalent to a bitwise move of one type into another. It copies the bits from the source value into the destination value, then forgets the original. 
+
+So the result is essentially the same. We get a `MontgomeryPoint` value that is overwritten as 32 zero bytes & at the end of the function scope, the value for `MontgomeryPoint` is dropped.
 
 I imagine that this is just scratching the surface when it comes to `drop` & useful logic that can modify your resources before they are dropped. These few examples for security were really cool & I'm excited to see more examples.
