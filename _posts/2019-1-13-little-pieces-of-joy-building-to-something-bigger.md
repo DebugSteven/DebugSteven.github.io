@@ -16,7 +16,7 @@ tag:
 It’s a common conversation starter. Most of the time I respond genuinely.
 > Great! How are you?
 
-It amused a few people this week. They commented on my seemingly endless supply of positivity. This post will be a reflect on what I did this week & the mindset I had while I did it.
+It amused a few people this week. They commented on my seemingly endless supply of positivity. This post will be a reflection on what I did this week & the mindset I had while I did it.
 
 On the first day at the Recurse Center, it’s customary for those currently in batch & returning alums to give advice. Some advice I heard when I started my batch & this time was to do more pair programming, attend events or workshops, stick to your planned projects, or deviate & work on the projects you find here that seem so cool! I think advice like this is given based what has worked for the person giving it & or what they hope they will do for themselves. & that is certainly true for myself too. I said,
 
