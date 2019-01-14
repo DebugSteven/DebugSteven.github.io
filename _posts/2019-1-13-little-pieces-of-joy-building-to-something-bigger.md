@@ -28,12 +28,12 @@ I have a handful of interview I’m preparing for & a stack of emails that I wan
 
 Part of that work was preparing for a Haskell interview I had. A made a list of blog posts & papers I wanted to read & prepared by writing some Haskell code. The stress of preparing & the negative emotions that were coming up resulted me in getting really upset. I tried to press through that feeling for 3 days *because it was work that had to get done*. 
 
-Wednesday night I decided to reach out to my Rust friends & tell them I was struggling. I told them I wanted to find the joy I have for programming since I had seemed to have lost it for a little over those few days. We found some issues to work on & I was so happy. I got to pair with QuietMisdreavus, Eliza Weisman, David Barsky, & Michael Gattozzi on Rust code! It was a lot of fun & I felt like it was really valuable.
+Wednesday night I decided to reach out to my Rust friends & tell them I was struggling. I told them I wanted to find the joy I have for programming since I seemed to have lost it over those few days. We found some issues to work on & I was so happy. I got to pair with QuietMisdreavus, Eliza Weisman, David Barsky, & Michael Gattozzi on Rust code! It was a lot of fun & I felt like it was really valuable.
 
 I got a PR merged for `rustdoc`! It [allows extern crates to be inlined for Rust 2015 code](https://github.com/rust-lang/rust/pull/57508) for Rust 2015 code. I got a [version bump for rustls](https://github.com/tower-rs/tower-grpc/pull/110) in `tower-grpc-interop` merged. I’m making more progress on an issue on [tower-grpc-build](https://github.com/tower-rs/tower-grpc/tree/master/tower-grpc-build). I’m helping out with another [rust wasm](https://github.com/rustwasm) issue. Lastly, the code I wrote to [create new types for keys and clear values on drop](https://github.com/dalek-cryptography/x25519-dalek/pull/15) was merged in `x25519-dalek` & I’m working on another issue in `curve25519-dalek`!
 
 I was asked, 
-> What makes contributing to Rust so enjoyable? Is it the code of conduct?
+> What makes contributing to Rust projects so enjoyable? Is it the code of conduct?
 
 In part, it’s the code of conduct. Another thing that Rust gets right is making sure that contributors know their contributions are welcome (& sometimes even helpful guides on how to get started or how to format contributions). All of these issues were ones where mentorship was/is being offered. I got an incredible amount of feedback on the `x25519-dalek` PR & I learned so much from it. The `rustdoc` issue also provided a lot of [useful mentoring notes](https://github.com/rust-lang/rust/issues/46296)!
 
