@@ -3,7 +3,7 @@ pre.highlight {
 }
 
 .highlight {
-	background-color: #49483e;
+	background-color: #262626;
 	font-family: $font2;
 	@include font-size(14);
 	color: #f8f8f2;
@@ -13,19 +13,19 @@ pre.highlight {
 		margin: 0;
 		padding: 1em;
 	}
-	.lineno            { padding-right: 24px; color: lighten(#49483e,50);}
-	.hll               { background-color: #49483e}
-	.c                 { color: #75715e }                            /* Comment                     */
-	.err               { color: #960050; background-color: #1e0010 } /* Error                       */
+	.lineno            { padding-right: 24px; color: lighten(#262626,50);}
+	.hll               { background-color: #262626}
+	.c                 { color: #999999 }                            /* Comment                     */
+	.err               { color: #f92672 }                            /* Error                       */
 	.k                 { color: #66d9ef }                            /* Keyword                     */
 	.l                 { color: #ae81ff }                            /* Literal                     */
 	.n                 { color: #f8f8f2 }                            /* Name                        */
 	.o                 { color: #f92672 }                            /* Operator                    */
 	.p                 { color: #f8f8f2 }                            /* Punctuation                 */
-	.cm                { color: #75715e }                            /* Comment.Multiline           */
-	.cp                { color: #75715e }                            /* Comment.Preproc             */
-	.c1                { color: #75715e }                            /* Comment.Single              */
-	.cs                { color: #75715e }                            /* Comment.Special             */
+	.cm                { color: #999999 }                            /* Comment.Multiline           */
+	.cp                { color: #999999 }                            /* Comment.Preproc             */
+	.c1                { color: #999999 }                            /* Comment.Single              */
+	.cs                { color: #999999 }                            /* Comment.Special             */
 	.ge                { font-style: italic }                        /* Generic.Emph                */
 	.gs                { font-weight: bold }                         /* Generic.Strong              */
 	.kc                { color: #66d9ef }                            /* Keyword.Constant            */
