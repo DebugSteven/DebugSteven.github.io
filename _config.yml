@@ -1,7 +1,7 @@
 # Site
 title:              J Haigh
-bio:                "Rust Developer | DenverFP co-organizer | Rust Boulder/Denver co-organizer | Runner of a Haskell Book Club | Occasional author of blog posts | Speaker | Hopeful about the future of programming"
-description:        "J Haigh is software developer passionate about Haskell & Rust. They want to share the joy they've found in learning those languages with others. Strong and static types help make them more confident that their code will work in the future."
+bio:                "Rust Developer | Rust Boulder/Denver co-organizer | Runner of a Haskell Book Club | Speaker | Hopeful about the future of programming"
+description:        "J Haigh is a software developer passionate about Haskell & Rust. They want to share the joy they've found in learning those languages with others. Strong and static types help make them more confident that their code will work in the future."
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
@@ -44,7 +44,7 @@ twitter:            DebugSteven
 #facebook:           username
 github-url:         DebugSteven
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-linkedin:           j-haigh-a80988106
+#linkedin:           j-haigh-a80988106
 #xing:              username
 #instagram:          username
 #lastfm:            username
