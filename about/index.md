@@ -16,6 +16,7 @@ Previously, I organized a [Haskell Book](haskellbook.com) Club in Denver & onlin
 
 _Pronouns?_
 They/Them/Their
+
 Here is a useful guide to use these pronouns if you are new to them: [pronoun.is/they](https://pronoun.is/they/.../themselves)
 
 _Is it just "J"?_ 
