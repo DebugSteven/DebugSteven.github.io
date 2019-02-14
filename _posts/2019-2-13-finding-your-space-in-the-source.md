@@ -79,8 +79,9 @@ sure how it would go.
 Immediately, we were greeted by the rust-highfive bot. The bot said,
 
 > Thanks for the pull request, and welcome! The Rust team is excited to
-> review your changes, and you should hear from @steveklabnik (or
-> someone else) soon.
+> review your changes, and you should hear from
+> [@steveklabnik](https://github.com/steveklabnik) (or someone else)
+> soon.
 
 The fact that this bot existed to welcome people’s changes was nice. I
 felt better that the changes might be well received. We got some code
@@ -88,7 +89,8 @@ review from [GuillaumeGomez](https://github.com/GuillaumeGomez), made
 another change, & [QuietMisdreavus](https://github.com/QuietMisdreavus)
 approved the changes. She even left a comment saying,
 
-> This is great! Thanks for following up on @GuillaumeGomez's comment.
+> This is great! Thanks for following up on
+> [@GuillaumeGomez](https://github.com/GuillaumeGomez)'s comment.
 > This is something i've wanted myself, so i'm glad you were able to get
 > it rolling.
 
