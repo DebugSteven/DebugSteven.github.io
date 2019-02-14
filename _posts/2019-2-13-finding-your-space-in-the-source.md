@@ -15,7 +15,8 @@ I’ve contributed to recently
 [curve25519-dalek](https://github.com/dalek-cryptography/curve25519-dalek),
 [rustdoc](https://github.com/rust-lang/rust/tree/master/src/librustdoc),
 [rust wasm](https://github.com/rustwasm), &
-[tower-grpc](https://github.com/tower-rs/tower-grpc)
+[tower-grpc](https://github.com/tower-rs/tower-grpc) & people have asked
+how I've gotten involved in open source.
 
 The short version of my story is this. People in the Rust community are
 really nice. Crate owners often label good first issues as such & in my
