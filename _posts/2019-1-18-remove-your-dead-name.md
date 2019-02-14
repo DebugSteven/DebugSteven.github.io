@@ -2,7 +2,7 @@
 layout:   post
 title:    "Remove Your Dead Name From Git Commits"
 date:     2019-1-18
-excerpt:  "How to overwrite your git commits with your an updated name!"
+excerpt:  "How to overwrite your git commits with an updated name!"
 comments: false
 tag:
 - git
