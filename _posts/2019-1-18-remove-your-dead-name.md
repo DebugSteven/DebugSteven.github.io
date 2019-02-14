@@ -9,8 +9,8 @@ tag:
 ---
 
 For production environments or other places where you might need to
-preserve your git history, consider using adding a .mailmap file to the
-top level of your directory instead. You can read more about how to use
+preserve your git history, consider adding a .mailmap file to the top
+level of your directory instead. You can read more about how to use
 .mailmap files [here](https://git-scm.com/docs/git-check-mailmap).
 Thanks to [Josh Triplett](https://twitter.com/josh_triplett) for
 suggesting this solution.
