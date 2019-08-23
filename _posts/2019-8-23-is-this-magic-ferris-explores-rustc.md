@@ -1,3 +1,15 @@
+---
+layout:   post
+title:    "Is This Magic!? Ferris Explores rustc"
+date:     2019-8-23
+excerpt:  "Getting started contributing to rustc"
+comments: false
+tag:
+- rust
+- compiler
+- community
+---
+
 ## Is This Magic!? Ferris Explores rustc
 
 This is the companion guide to the "Is This Magic!? Ferris Explores
