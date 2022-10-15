@@ -382,7 +382,7 @@ rulebraker b =
 ```
 
 The type signature & the function name are different.
-You may notice that there is a type in one of them.
+You may notice that there is a typo in one of them.
 
 If you have a type signature, you must have a function implementation with it.
 We'll just fix our typo.
